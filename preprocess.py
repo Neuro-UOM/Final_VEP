@@ -55,9 +55,21 @@ blue_csv =  ['data/raw_hansika_blue.csv',   'data/raw_heshan_blue.csv',     'dat
 green_csv = ['data/raw_hansika_green.csv',  'data/raw_heshan_green.csv',    'data/raw_dinuka_green.csv',    'data/raw_nadun_green.csv',     'data/raw_ravindu_green.csv']
 red_csv =   ['data/raw_hansika_red.csv',    'data/raw_heshan_red.csv',      'data/raw_dinuka_red.csv',      'data/raw_nadun_red.csv',       'data/raw_ravindu_red.csv']
     
-train_data = np.concatenate((   preprocess(1, red_csv[0]),    preprocess(1, red_csv[1]),    preprocess(1, red_csv[2]),    
-                                preprocess(2, green_csv[0]),  preprocess(2, green_csv[1]),  preprocess(2, green_csv[2]),  
-                                preprocess(3, blue_csv[0]),   preprocess(3, blue_csv[1]),   preprocess(3, blue_csv[2])   
+train_data = np.concatenate((   preprocess(1, red_csv[0]),    
+                                preprocess(1, red_csv[1]),    
+                                preprocess(1, red_csv[2]),    
+                                preprocess(1, red_csv[3]),    
+                                #preprocess(1, red_csv[4]), 
+                                preprocess(2, green_csv[0]),  
+                                preprocess(2, green_csv[1]),  
+                                preprocess(2, green_csv[2]),  
+                                preprocess(2, green_csv[3]),
+                                #preprocess(2, green_csv[4]),
+                                #preprocess(3, blue_csv[0]),   
+                                #preprocess(3, blue_csv[1]),   
+                                #preprocess(3, blue_csv[2])   
+                                #preprocess(3, blue_csv[3]),   
+                                #preprocess(3, blue_csv[4])
                             ), axis=0)
 
 test_data = np.concatenate((    preprocess(1, red_csv[3]),    preprocess(1, red_csv[4]), 
