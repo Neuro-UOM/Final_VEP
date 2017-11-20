@@ -40,18 +40,18 @@ def main():
     classifiers = [ 
                     DecisionTreeClassifier(),
                     KNeighborsClassifier(n_neighbors=9),
-                    GaussianNB(),
-                    MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(5, 2), random_state=3),
-                    NearestCentroid(),
-                    RandomForestClassifier()
-                    #SVC(decision_function_shape='ovo'), 
+                    #GaussianNB(),
+                    #MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(5, 2), random_state=3),
+                    #NearestCentroid(),
+                    RandomForestClassifier(n_estimators=200, oob_score=True, n_jobs = -1),
+                    SVC(decision_function_shape='ovo'), 
                     #SVC(kernel='linear', C=1),
                   ]
 
     for clf in classifiers:
         print ""
         print clf
-        print clf.classes_
+        #print clf.classes_
 
         #clf.fit(train_X, train_Y)
         #print(confusion_matrix(test_Y, clf.predict(test_X)))                                                    
